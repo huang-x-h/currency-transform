@@ -5,10 +5,21 @@
 **Node.js 4 or higher**
 
 ```
-$ npm install
+$ npm install currency-transform --save
 ```
 
 ## Usage
+
+```js
+var transform = require('currency-transform')
+transform({
+  from: 'JPY',
+  amount: 100
+}).then(function(data) {
+  console.log(data)
+})
+```
+
 ## API
 `transform(options)`
 
