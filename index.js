@@ -1,7 +1,6 @@
 'use strict'
 
 const got = require('got')
-const apiKey = '' // your apiKey
 const defaultOptions = {
   from: 'USD',
   to: 'CNY',
@@ -19,7 +18,7 @@ module.exports = function transform(options) {
     },
     json: true,
     headers: {
-      apikey: apiKey
+      apikey: options.apiKey
     }
   }).then(function(data) {
     let body = data.body

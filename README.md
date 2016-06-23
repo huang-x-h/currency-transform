@@ -13,6 +13,7 @@ $ npm install currency-transform --save
 ```js
 var transform = require('currency-transform')
 transform({
+  apiKey: '', // add your baidu developer apiKey
   from: 'JPY',
   amount: 100
 }).then(function(data) {
@@ -24,6 +25,7 @@ transform({
 `transform(options)`
 
 `options` 参数定义
+- `options.apiKey` API密钥
 - `options.from` 待转化的币种，默认 `USD`
 - `options.to` 转化后的币种，默认 `CNY`
 - `options.amount` 转化金额，默认 `1`
